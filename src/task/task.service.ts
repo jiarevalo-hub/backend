@@ -8,8 +8,8 @@ export class TaskService {
   constructor(private readonly prismatask:PrismaService) {}
 
 
- create(createUserDto: CreateTaskDto) {
-    return this.prismatask.task.create({ data: createUserDto,
+ create(createTaskDto: CreateTaskDto) {
+    return this.prismatask.task.create({ data: createTaskDto,
     });
   }
 
