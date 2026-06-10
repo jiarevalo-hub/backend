@@ -7,10 +7,11 @@ import { UpdateTaskDto } from './dto/update-task.dto';
 export class TaskController {
   constructor(private readonly taskService: TaskService) {}
 
-  @Post()
-  create(@Body() createTaskDto: CreateTaskDto) {
-    return this.taskService.create(createTaskDto);
-  }
+// task.controller.ts
+@Post()
+create(@Body() dto: CreateTaskDto) {
+  return this.taskService.create(dto);
+}
 
   @Get()
   findAll() {
